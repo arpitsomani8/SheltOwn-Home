@@ -228,10 +228,10 @@ p.speech {
   text-align: center;
 
   background-color: #fff;
-  border: 1px solid #666;
-  -webkit-box-shadow: 2px 2px 4px #888;
-  -moz-box-shadow: 2px 2px 4px #888;
-  box-shadow: 2px 2px 4px #888;
+  border: 1px solid #2ecab6;
+  -webkit-box-shadow: 2px 2px 4px #2ecab6;
+  -moz-box-shadow: 2px 2px 4px #2ecab6;
+  box-shadow: 2px 2px 4px#2ecab6;
 }
 
 p.speech:before {
@@ -241,8 +241,8 @@ p.speech:before {
   height: 0;
   left: 0px;
   top: 98px;
-  border: 25px solid;
-  border-color: #666 transparent transparent #666;
+  border: 25px solid #2ecab6;
+  border-color: #2ecab6 transparent transparent #2ecab6;
 }
 
 p.speech:after {
