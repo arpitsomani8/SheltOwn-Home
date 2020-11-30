@@ -220,6 +220,67 @@ footer a {
 
 /*---------------------------------------why sheltown part end---------------------------------------*/
 
+/*---------------------------------------here from customer part start---------------------------------------*/
+p.speech {
+  position: relative;
+  width: 400px;
+  height: 100px;
+  text-align: center;
+
+  background-color: #fff;
+  border: 1px solid #666;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+}
+
+p.speech:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0px;
+  top: 98px;
+  border: 25px solid;
+  border-color: #666 transparent transparent #666;
+}
+
+p.speech:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 8px;
+  top: 98x;
+  border: 15px solid;
+  border-color: #fff transparent transparent #fff;
+}
+
+.rates {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rates:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rates:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+.rates:not(:checked) > label:before {
+  content: "★ ";
+}
+.rates > input:checked ~ label {
+  color: #ffc700;
+}
+
 /*--------------------------------------table part start--------------------------------------------*/
 .fa-info-circle {
   color: black;
