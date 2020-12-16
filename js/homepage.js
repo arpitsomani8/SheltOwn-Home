@@ -40,7 +40,7 @@ $(document).ready(function () {
     e.preventDefault();
     setTimeout(function () {
       $("#otp").css("display", "block");
-    }, 5000);
+    }, 0);
   });
   //hide signuppage1 modal and display signuppage2 modal;
   $("#verifytotpbtn").click(function (e) {
@@ -174,4 +174,4 @@ $(document).ready(function () {
       return false;
     }
   }
-}); //ready function end
+}); //ready function end settimeout
