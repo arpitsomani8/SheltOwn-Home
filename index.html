@@ -122,20 +122,26 @@
                   </div>
                   <p class="mt-0" style="color: red;">Your information is safe with us.</p>
                   <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
-                    <label class="form-check-label" for="exampleCheck1">Signing up to the world of All-Of-Home Services, Freedom and Privacy.</label>
-                  </div>
+                    
+                    
+                      <input type="checkbox" class="radio form-check-input" id="exampleCheck1" value="1" name="fooby[1][]" checked/>
+                      <label class="form-check-label" for="exampleCheck1">Signing up to the world of All-Of-Home Services, Freedom and Privacy.</label>
+                    
+                     
 
-                  <div class="d-flex justify-content-end">
+                      <div class="d-flex justify-content-end">
                     <div class="p-2" style="background:#ffc107">
                       <div class="form-check " style="">
-                        <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios1" value="option1">
+                        <input class="radio form-check-input" type="checkbox" name="fooby[1][]" id="gridRadios1" value="1">
                         <label class="form-check-label" for="">
                           I am a property owner
                         </label>
                       </div>
                     </div>
                   </div>
+                    </div>
+                  <div>
+                 
                   <div><button class="btn btn-success" id="sendOtpbtn">Continue</button></div>
                 </div>
                 <div class="otp" id="otp" style="display: none;">
@@ -163,25 +169,7 @@
       </div><!-- modal-content end-->
     </div><!-- modal-dialog end-->
   </div> <!-- modal end-->
-  <script>
-    $('.inputb').find('input').each(function () {
-      $(this).on('keyup', function (e) {
-        var parent = $($(this).parent());
-        if (e.keyCode === 8 || e.keyCode === 37) {
-          var prev = parent.find('input#' + $(this).data('previous'));
-          if (prev.length) {
-            $(prev).select();
-          }
-        } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
-          var next = parent.find('input#' + $(this).data('next'));
-
-          if (next.length) {
-            $(next).select();
-          }
-        }
-      });
-    });
-  </script>
+  
 
   <!--------------------------signup modal page1end---------------------------------------->
   <!--------------------------signup modal page 2 start---------------------------------------->
@@ -247,10 +235,10 @@
         <div class="modal-body">
           <button type="button" class="close" data-dismiss="modal">&times;</button><br />
           <div>
-            <h3 class="text-center">Your account has successfully created</h3>
-            <div style="margin-left: 150px;">
-              <img src="images/tick1.gif" style="width:100px;height:100px"></div><br>
-            <div class="text-center" style="font-size: 20px;color:blue"><a>click here to login</a></div>
+            <h3 class="text-center" style="text-align: center;">Your account has been successfully created</h3>
+            <div style="text-align: center;">
+              <img src="images/tick1.gif" style="width:100px;height:100px;text-align: center;"></div><br>
+            
           </div>
         </div>
       </div>
@@ -274,7 +262,7 @@
           <form class="form-container login-form" id="loginForm">
 
             <div class="form-group">
-              <label>Enter Phone No. To Continue Login</label>
+              <label>Enter Phone Number To Continue Login</label>
               <div class="input-group mb-2 mr-sm-2">
                 <div class="input-group-prepend">
                   <div class="input-group-text"><i class="india flag"></i></div>
@@ -1214,6 +1202,46 @@
 
     });
 
+  </script>
+
+  <script>
+    $('.inputb').find('input').each(function () {
+      $(this).on('keyup', function (e) {
+        var parent = $($(this).parent());
+        if (e.keyCode === 8 || e.keyCode === 37) {
+          var prev = parent.find('input#' + $(this).data('previous'));
+          if (prev.length) {
+            $(prev).select();
+          }
+        } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
+          var next = parent.find('input#' + $(this).data('next'));
+
+          if (next.length) {
+            $(next).select();
+          }
+        }
+      });
+    });
+  </script>
+
+  <script>
+    // the selector will match all input controls of type :checkbox
+      // and attach a click event handler 
+      $("input:checkbox").on('click', function () {
+        // in the handler, 'this' refers to the box clicked on
+        var $box = $(this);
+        if ($box.is(":checked")) {
+          // the name of the box is retrieved using the .attr() method
+          // as it is assumed and expected to be immutable
+          var group = "input:checkbox[name='" + $box.attr("name") + "']";
+          // the checked state of the group/box on the other hand will change
+          // and the current value is retrieved using .prop() method
+          $(group).prop("checked", false);
+          $box.prop("checked", true);
+        } else {
+          $box.prop("checked", false);
+        }
+      });
   </script>
 
 
