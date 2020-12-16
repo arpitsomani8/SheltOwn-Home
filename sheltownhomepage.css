@@ -22,7 +22,7 @@ html {
 }
 .nav-item a,
 .navbar-brand {
-  color: #26b4a1 !important;
+  color: #2ecab6 !important;
 }
 .nav-link {
   font-weight: bold !important;
@@ -47,6 +47,13 @@ html {
   }
 }
 /*-----------------------navbar end------------------------------------------->*/
+
+.inputb input[type="text"] {
+  width: 15% !important;
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
 /*-----------------------1st part start------------------------------------------->*/
 .a1 {
   background: #2ecab6;
@@ -247,6 +254,55 @@ input[type="search"] {
 }
 .mydatatable th {
   text-align: center;
+}
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.popup button {
+  border: none;
+  outline: none;
+  padding: 2%;
+}
+.popup button:focus {
+  outline: none;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 15px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 28%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
 @media only screen and (max-width: 475px) {
   .mydatatable {
